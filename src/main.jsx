@@ -17,11 +17,13 @@ import Recforme from './componants/Recforme';
 import Myqueries from './componants/Myqueries';
 import Myrec from './componants/Myrec';
 import PrivateRoute from './componants/PrivateRoute';
+import Error from './componants/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Route></Route>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',
