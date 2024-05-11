@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Navigate, useNavigate } from 'react-router';
-import { myContext } from './Authentication';
 import Lottie from 'lottie-react';
 import loader from '../../public/loader.json'
 import Contex from './Contex';

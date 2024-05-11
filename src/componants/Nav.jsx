@@ -7,8 +7,8 @@ import Swal from 'sweetalert2';
 import { auth } from './firebase/firebase.config';
 
 const Nav = () => {
-    const {user,dep2,setDep2}=Contex()
-    const  [use ,setUse]=useState(false)
+    const { user, dep2, setDep2 } = Contex()
+    const [use, setUse] = useState(false)
     const [min, setMin] = useState(true);
     const toggle = () => {
         setMin(!min)
@@ -16,21 +16,21 @@ const Nav = () => {
     const signOutt = () => {
 
         signOut(auth)
-          .then(() => {
-    
-    
-            Swal.fire({
-              title: "You have been successfully logged out",
-              icon: "success",
-              showConfirmButton: false,
-              timer: 2000
-    
-            });
-            setDep2(!dep2)
-    
-    
-          })
-      }
+            .then(() => {
+
+
+                Swal.fire({
+                    title: "You have been successfully logged out",
+                    icon: "success",
+                    showConfirmButton: false,
+                    timer: 2000
+
+                });
+                setDep2(!dep2)
+
+
+            })
+    }
 
     const allNav = <>
 
@@ -43,6 +43,22 @@ const Nav = () => {
                 <NavLink to={'/queries'} className={({ isActive }) =>
                     isActive ? 'text-blue-500 border-b-2 border-blue-600  py-3  transition duration-300 ease-in-out ' : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>Queries</NavLink>
             </li>
+            {
+                user ? <div  className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+                    <li>
+                        <NavLink to={'/rec-for-me'} className={({ isActive }) =>
+                            isActive ? 'text-blue-500 border-b-2 border-blue-600  py-3  transition duration-300 ease-in-out ' : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"} >Recommendations For me</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/myqueries'} className={({ isActive }) =>
+                            isActive ? 'text-blue-500 border-b-2 border-blue-600  py-3  transition duration-300 ease-in-out ' : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>My Queries</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/my-rec'} className={({ isActive }) =>
+                            isActive ? 'text-blue-500 border-b-2 border-blue-600  py-3  transition duration-300 ease-in-out ' : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>My recommendations</NavLink>
+                    </li>
+                </div> : ""
+            }
 
         </ul>
 

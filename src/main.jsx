@@ -12,6 +12,11 @@ import Home from './componants/Home';
 import Queries from './componants/Queries';
 import Login from './componants/Login';
 import Register from './componants/Register';
+import Add from './componants/Add';
+import Recforme from './componants/Recforme';
+import Myqueries from './componants/Myqueries';
+import Myrec from './componants/Myrec';
+import PrivateRoute from './componants/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +38,21 @@ const router = createBrowserRouter([
       ,{
         path:'/register',
         element:<Register></Register>
+      },{
+        path:'/add',
+        element:<PrivateRoute><Add></Add></PrivateRoute>
+      }
+      ,{
+        path:'/rec-for-me',
+        element:<PrivateRoute><Recforme></Recforme></PrivateRoute>
+      }
+      ,{
+        path:'/myqueries',
+        element:<PrivateRoute><Myqueries></Myqueries></PrivateRoute>
+      }
+      ,{
+        path:'/my-rec',
+        element:<PrivateRoute><Myrec></Myrec></PrivateRoute>
       }
     ]
   },
