@@ -8,10 +8,20 @@ import 'swiper/css/navigation';
 const Home = () => {
 
     const data = useLoaderData()
-    console.log(data)
+
+    const pp=data[0].date
+   
+    const dateObject = new Date(pp).toLocaleString();
+  
+
+
+;
+
+
+      const sortedData = data.sort((a, b) => (b.date-a.date ));
 
     // const slicedData = data.slice(0, 6);
-    // // console.log(data)
+    console.log(sortedData)
 
 
 
