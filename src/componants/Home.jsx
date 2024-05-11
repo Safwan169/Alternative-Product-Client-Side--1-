@@ -29,12 +29,11 @@ const Home = () => {
 //             modules={[Autoplay, Pagination, Navigation]}
 //             className="mySwiper"
 //         >
-//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src={data[0].url} alt="" /></SwiperSlide>
-//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src={data[1].url} alt="" /></SwiperSlide>
-//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src={data[2].url} alt="" /></SwiperSlide>
-//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src={data[3].url} alt="" /></SwiperSlide>
-//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src={data[4].url} alt="" /></SwiperSlide>
-//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src={data[5].url} alt="" /></SwiperSlide>
+//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src="https://i.ibb.co/5R4Gpqy/1.jpg" alt="" /></SwiperSlide>
+//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src="https://i.ibb.co/5R4Gpqy/1.jpg"" alt="" /></SwiperSlide>
+//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src="https://i.ibb.co/5R4Gpqy/1.jpg""} alt="" /></SwiperSlide>
+//             <SwiperSlide ><img className=' w-full bg-cover h-svh lg:h-[650px]' src="https://i.ibb.co/5R4Gpqy/1.jpg"" alt="" /></SwiperSlide>
+//             
 
 //         </Swiper>
 //         <div className='text-center text-4xl font-semibold my-20  flex justify-center '>
