@@ -32,9 +32,9 @@ const Details = () => {
         setDate(Date.now())
         const date = datee
         // console.log(datee)
-        const email = user.email;
-        const user_name = user.displayName;
-        const image = user.photoURL;
+        const user_email = user.email;
+        const user_name1 = user.displayName;
+        const image1 = user.photoURL;
 
         const Recname = e.target.recName.value;
         // const namee = e.target.productt_namee.value;
@@ -47,7 +47,7 @@ const Details = () => {
         // console.log(product_title,brand_name,email,name,url,reason)
         // console.log(email, name, user_name, image, title, url, brand, reason)
         const querieId=_id
-        const userr = { querieId, user_name, image, date, email, Recname, brandd_name, reasonn, urll, productt_title }
+        const userr = { querieId,email,user_name,image, user_name1, image1, date, user_email, Recname, brandd_name, reasonn, urll, productt_title }
         // send data to the server
 
         // console.log(ID,Recname)
@@ -110,7 +110,7 @@ const Details = () => {
     return (
         <div className='mt-40 lg:w-[1200px] mx-auto'>
             <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img className='rounded-3xl my-2 w-[400px] h-[300px]' src={url} alt="Movie" /></figure>
+                <figure><img className='rounded-3xl my-2 w-[400px] bg-cover h-[400px]' src={url} alt="" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{product_title}</h2>
                     <p>Product Name : {name}</p>
