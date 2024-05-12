@@ -10,8 +10,8 @@ const Add = () => {
         e.preventDefault()
         setDate(Date.now())
         const date = datee
-console.log(datee)
-         const recommendationCount=0
+        console.log(datee)
+        const recommendationCount = 0
         const email = user.email;
         const user_name = user.displayName;
         const image = user.photoURL;
@@ -28,7 +28,7 @@ console.log(datee)
         const reason = e.target.reason.value;
         // console.log(product_title,brand_name,email,name,url,reason)
         // console.log(email, name, user_name, image, title, url, brand, reason)
-        const userr = {user_name,image,date, email, name, brand_name, reason, url,product_title,recommendationCount }
+        const userr = { user_name, image, date, email, name, brand_name, reason, url, product_title, recommendationCount }
         // send data to the server
         fetch("http://localhost:5000/queries", {
             method: 'POST',
@@ -44,7 +44,7 @@ console.log(datee)
 
                     Swal.fire({
                         title: "Good job!",
-                        text: "You have successfully added a spot",
+                        text: "You have successfully added",
                         icon: "success",
                         showConfirmButton: false,
                         timer: 2000

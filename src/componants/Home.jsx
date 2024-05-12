@@ -16,13 +16,14 @@ const Home = () => {
 
 
 
-    ;
+    
 
 
-    const sortedData = data.sort((a, b) => (b.date - a.date));
+    // const sortedData = data.sort((a, b) => (b.date - a.date));
 
     const slicedData = data.slice(0, 6);
-    console.log(sortedData)
+    // console.log(sortedData)
+    // console.log(slicedData)
 
 
 

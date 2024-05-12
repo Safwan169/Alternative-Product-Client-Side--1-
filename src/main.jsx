@@ -18,6 +18,7 @@ import Myqueries from './componants/Myqueries';
 import Myrec from './componants/Myrec';
 import PrivateRoute from './componants/PrivateRoute';
 import Error from './componants/Error';
+import Details from './componants/Details';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,12 @@ const router = createBrowserRouter([
       ,{
         path:'/my-rec',
         element:<PrivateRoute><Myrec></Myrec></PrivateRoute>
+      }
+      ,{
+        path:'/details/:id',
+        // loader:()=>fetch('http://localhost:5000/queries'),
+      
+        element:<PrivateRoute><Details></Details></PrivateRoute>
       }
     ]
   },
