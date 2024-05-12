@@ -58,7 +58,7 @@ const Home = () => {
 
             </Swiper>
             <div>
-                <div>
+                <div className='font-bold text-3xl flex justify-center mt-20'>
                     Recent Queries
                 </div>
                 <div className="lg:grid  lg:grid-cols-3 justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10">
