@@ -3,7 +3,6 @@ import Contex from './Contex';
 const Myqueries = () => {
     const {user}=Contex()
     const email=user.email
-    console.log(email)
     const [userr,setData]=useState()
     useEffect(()=>{fetch(`http://localhost:5000/myqueries/${email}`)
                 .then(res=>res.json())
