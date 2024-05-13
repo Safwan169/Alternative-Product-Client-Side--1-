@@ -3,14 +3,15 @@ import Swal from 'sweetalert2';
 import Contex from './Contex';
 
 const Add = () => {
-    const { user } = Contex()
+    const { user,load,setLoad } = Contex()
     const [datee, setDate] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault()
         setDate(Date.now())
-        const date = datee
+        const date = (new Date(datee))
         console.log(datee)
+        console.log(new Date(datee))
         const recommendationCount = 0
         const email = user.email;
         const user_name = user.displayName;
@@ -40,6 +41,7 @@ const Add = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                setLoad(!load)
                 if (data.insertedId) {
 
                     Swal.fire({

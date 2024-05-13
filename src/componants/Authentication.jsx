@@ -12,6 +12,9 @@ const Authentication = ({ children }) => {
     const [dep, setDep] = useState(false)
     const [dep2, setDep2] = useState(false)
 
+    // queries data load state
+    const [load,setLoad]=useState(false)
+
 
     const createUser = (email, password) => {
 
@@ -56,7 +59,9 @@ const Authentication = ({ children }) => {
         setDep,
         setDep2,
         loading,
-        setLoading
+        setLoading,
+        load,
+        setLoad
     }
     return (
         <myContext.Provider value={authInfo}>

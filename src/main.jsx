@@ -57,6 +57,8 @@ const router = createBrowserRouter([
       }
       ,{
         path:'/my-rec',
+        loader:()=>fetch('http://localhost:5000/rec'),
+        
         element:<PrivateRoute><Myrec></Myrec></PrivateRoute>
       }
       ,{

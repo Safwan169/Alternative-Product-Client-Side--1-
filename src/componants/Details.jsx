@@ -15,9 +15,9 @@ const Details = () => {
         .then(res => res.json())
         .then(data => setDataa(data))
     }, [load])
-    console.log(datada)
+    // console.log(datada)
     const allData = datada?datada.find(d => d._id == ID):''
-    console.log(allData._id)
+    // console.log(allData._id)
     // const {_id}=allData
     // console.log(_id)
 
@@ -26,12 +26,12 @@ const Details = () => {
 
 
     const { user } = Contex()
-    const [datee, setDate] = useState();
+    const [dd, setDate] = useState();
     const handleSubmit = (e) => {
         e.preventDefault()
         setDate(Date.now())
-        const date = datee
-        // console.log(datee)
+        const dat = new Date(dd)
+        console.log(dat)
         const user_email = user.email;
         const user_name1 = user.displayName;
         const image1 = user.photoURL;
