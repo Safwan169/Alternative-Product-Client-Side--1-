@@ -19,6 +19,7 @@ import Myrec from './componants/Myrec';
 import PrivateRoute from './componants/PrivateRoute';
 import Error from './componants/Error';
 import Details from './componants/Details';
+import Update from './componants/Update';
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
         // loader:()=>fetch('http://localhost:5000/queries'),
       
         element:<PrivateRoute><Details></Details></PrivateRoute>
+      }
+      ,{
+        path:'/update/:id',
+        element:<PrivateRoute><Update></Update></PrivateRoute>
       }
     ]
   },
