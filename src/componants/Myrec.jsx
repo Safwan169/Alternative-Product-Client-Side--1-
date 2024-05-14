@@ -42,16 +42,12 @@ const Myrec = () => {
                 .then(data=>{
                 setLoad(!load)
                         console.log(data)
-                    if (data.deletedCount) {
-
-                        Swal.fire({
-                            title: "Good job!",
-                            text: "You have successfully delete",
-                            icon: "success",
-                            showConfirmButton: false,
-                            timer: 2000
-    
-                        });
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                              'Deleted!',
+                              'Your Recommendation has been deleted.',
+                              'success'
+                            )
     
                     }
                 })

@@ -17,6 +17,16 @@ const MyAllqueries = ({ datas }) => {
 
 
         // const userr={}
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
         fetch(`http://localhost:5000/queries/${id}`,
             {
                 method: 'delete',
@@ -30,20 +40,14 @@ const MyAllqueries = ({ datas }) => {
             .then(data=>{
                 setLoad(!load)
                         console.log(data)
-                    if (data.deletedCount) {
-
-                        Swal.fire({
-                            title: "Good job!",
-                            text: "You have successfully delete",
-                            icon: "success",
-                            showConfirmButton: false,
-                            timer: 2000
-    
-                        });
-    
-                    }
-                })
-    }
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                              'Deleted!',
+                              'Your Queries has been deleted.',
+                              'success'
+                            )
+                }})
+    }})}
     return (
         <div >
 

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import Contex from './Contex';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Add = () => {
-    const { user,load,setLoad } = Contex()
+    const { user, load, setLoad } = Contex()
     const [datee, setDate] = useState();
 
     const handleSubmit = (e) => {
@@ -58,7 +59,26 @@ const Add = () => {
             })
     }
     return (
-        <div className='mt-40'>
+        <div className='mt-12'>
+            <div className='text-3xl text-center '>
+                <h1 style={{ paddingTop: '5rem', margin: ' 0', fontWeight: 'normal' }}>
+                    Add  {' '}
+                    <span style={{ color: 'red', fontWeight: 'bold' }}>
+                        {/* Style will be inherited from the parent element */}
+                        <Typewriter
+                            words={['Queries']}
+                            loop={50}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={180}
+                            deleteSpeed={150}
+                            delaySpeed={1000}
+                        // onLoopDone={handleDone}
+                        // onType={handleType}
+                        />
+                    </span>
+                </h1>
+            </div>
             <form onSubmit={handleSubmit} action="">
                 <div className='mt-20  space-y-8 lg:w-[1200px] mx-auto'>
                     <div className='flex gap-10 justify-center '>
