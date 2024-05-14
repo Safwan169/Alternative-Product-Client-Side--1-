@@ -31,7 +31,7 @@ const Recforme = () => {
                         <th scope="col" className="px-6  text-center py-3">
                             Title
                         </th>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 text-center py-3">
                             date
                         </th>
                         {/* <th scope="col" className="px-6 py-3">
@@ -51,7 +51,7 @@ const Recforme = () => {
                             {d.productt_title}
                         </td>
                         <td className="px-6  w-20 py-4">
-                            {d.date}
+                            {new Date(d.date).toLocaleString()}
                         </td>
                         {/* <td className="px-6  w-[30px]  py-4 text-right">
                             <a onClick={()=>handleSubmit((d.querieId),(d._id))} href="#" className="font-medium  w-min text-blue-600 dark:text-blue-500 hover:underline"><MdDelete size={25} />

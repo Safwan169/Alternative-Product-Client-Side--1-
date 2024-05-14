@@ -9,7 +9,7 @@ const Allqueries = ({datas}) => {
         <div className=' flex justify-center' >
 
 
-            <div className="max-w-sm my-5  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="max-w-sm my-5   bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                     <img className="rounded-t-lg w-[400px] h-[300px]" src={`${url}`} alt="" />
                 </a>
@@ -17,7 +17,7 @@ const Allqueries = ({datas}) => {
                     <a href="#">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{product_title}</h5>
                     </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{name}</p>
+                    <p className="mb-3 font-normal text-gray-700 dark:bg-black dark:text-gray-400">{name}</p>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Brand : {brand_name}</p>
                     <p className="mb-3 font-normal h-10 text-gray-700 dark:text-gray-400">Reason : {reason}</p>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Post : {datee}</p>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Contex from './Contex';
 import Swal from 'sweetalert2';
+import RecComment from './RecComment';
 
 const Details = () => {
     const dataId = useParams()
@@ -9,7 +10,11 @@ const Details = () => {
     const [datada, setDataa] = useState()
     const [load, setLoad] = useState(false)
     // console.log(ID)
-    // const data = useLoaderData()
+    const data = useLoaderData()
+    console.log(data)
+    // recommendation data filter by id
+    const Rec=data.filter(d=>d.querieId==ID)
+    console.log(Rec)
     useEffect(() => {
         fetch('http://localhost:5000/queries')
         .then(res => res.json())
@@ -122,6 +127,17 @@ const Details = () => {
 
                 </div>
             </div>
+            
+
+            <div>
+                  {
+                    Rec.map(d=><RecComment datas={d}></RecComment>)
+                  }
+
+            </div>
+
+
+            {/* add recommendation form */}
             <div className=' mt-20'>
                 <div className='flex justify-center  w-full'>
                     <p className=' font-bold text-3xl border-b border-black pb-2 w-max text-center'>Add A Recommendation</p>
