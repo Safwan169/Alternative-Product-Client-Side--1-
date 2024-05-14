@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import Contex from './Contex';
@@ -7,6 +7,28 @@ import Swal from 'sweetalert2';
 import { auth } from './firebase/firebase.config';
 
 const Nav = () => {
+    // toggle theme
+    const [theme, setTheme] = useState('light');
+
+    useEffect(() => {
+        const localTheme = localStorage.getItem('theme');
+        if (localTheme) {
+            setTheme(localTheme);
+            document.querySelector('html').setAttribute('data-theme', localTheme);
+        }
+    }, []);
+
+    const handleToggle = (e) => {
+        const newTheme = e.target.checked ? 'dark' : 'light';
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+        document.querySelector('html').setAttribute('data-theme', newTheme);
+    };
+
+
+
+
+
     const { user, dep2, setDep2 } = Contex()
     const [use, setUse] = useState(false)
     const [min, setMin] = useState(true);
@@ -44,7 +66,7 @@ const Nav = () => {
                     isActive ? 'text-blue-500 border-b-2 border-blue-600  py-3  transition duration-300 ease-in-out ' : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>Queries</NavLink>
             </li>
             {
-                user ? <div  className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+                user ? <div className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
                     <li>
                         <NavLink to={'/rec-for-me'} className={({ isActive }) =>
                             isActive ? 'text-blue-500 border-b-2 border-blue-600  py-3  transition duration-300 ease-in-out ' : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"} >Recommendations For me</NavLink>
@@ -79,7 +101,7 @@ const Nav = () => {
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
                     </a>
                     <div className="flex md:order-2 space-x-3 border items-center   md:space-x-0 rtl:space-x-reverse">
-                        <div className="navbar-end lg:flex md:flex  items-center  text-center  justify-end  lg:w-[120px] ml-4">
+                        <div className="navbar-end lg:flex md:flex mr-2 items-center  text-center  justify-end  lg:w-[120px] ml-4">
                             {
                                 user ? <div onClick={() => setUse(!use)} className=" h-full -ml-[50px] tooltip hover:tooltip-open tooltip-left z-30" data-tip={user.displayName ? user.displayName : "Not Available"}  ><img className="rounded-[50%] w-[30px]   lg:w-[50px] bg-white " src={user.photoURL} alt="" /></div> : <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} className="hover:text-red-400" /></button>}
                             {
@@ -94,6 +116,32 @@ const Nav = () => {
                             }
 
                         </div>
+
+                        {/* toggle */}
+                        <div className=" ">
+
+
+                            <div className="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    id="toggleTheme"
+                                    checked={theme === 'dark'}
+                                    onChange={handleToggle}
+                                    className="hidden"
+                                />
+                                <label
+                                    htmlFor="toggleTheme"
+                                    className={`w-12 h-6 flex items-center pl-1 rounded-full cursor-pointer ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-300'
+                                        }`}
+                                >
+                                    <span className={`block w-4 h-4 rounded-full bg-white shadow-md transform transition-transform duration-300 ${theme === 'dark' ? 'translate-x-6' : ''}`}></span>
+                                </label>
+                            </div>
+
+
+                        </div>
+
+
                         <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                             <span className="sr-only">
                                 {allNav}
