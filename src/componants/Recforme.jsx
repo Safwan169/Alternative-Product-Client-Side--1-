@@ -6,7 +6,7 @@ const Recforme = () => {
 
     const [Data,setData]=useState()
     // const [load,setLoad]=useState(false)
-    useEffect(()=>{fetch('http://localhost:5000/rec')
+    useEffect(()=>{fetch('https://assinment-11-server-side-alpha.vercel.app/rec')
         .then(res=>res.json())
         .then(data=>setData(data))
     },[load])

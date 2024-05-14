@@ -6,14 +6,15 @@ import { useNavigate, useParams } from 'react-router-dom';
 const Update = () => {
     const Id = useParams().id
     const { user, load, setLoad } = Contex()
-    const [datee, setDate] = useState();
+    // const [date, setDate] = useState();
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        setDate(Date.now())
-        const date = (new Date(datee))
-        console.log(datee)
-        console.log(new Date(datee))
+        // setDate(Date.now())
+      const  date=Date.now()
+        // const date = (new Date(datee))
+        // console.log(datee)
+        // console.log(new Date(datee))
         // const recommendationCount = 0
         // const email = user.email;
         // const user_name = user.displayName;
@@ -33,7 +34,7 @@ const Update = () => {
         // console.log(email, name, user_name, image, title, url, brand, reason)
         const userr = { date, name, brand_name, reason, url, product_title }
         // send data to the server
-        fetch(`http://localhost:5000/queriesUpdate/${Id}`, {
+        fetch(`https://assinment-11-server-side-alpha.vercel.app/queriesUpdate/${Id}`, {
             method: 'put',
             headers: {
                 'content-type': 'application/json'

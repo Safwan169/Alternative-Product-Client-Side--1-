@@ -16,7 +16,7 @@ const Details = () => {
     const Rec=data.filter(d=>d.querieId==ID)
     console.log(Rec)
     useEffect(() => {
-        fetch('http://localhost:5000/queries')
+        fetch('https://assinment-11-server-side-alpha.vercel.app/queries')
         .then(res => res.json())
         .then(data => setDataa(data))
     }, [load])
@@ -31,12 +31,12 @@ const Details = () => {
 
 
     const { user } = Contex()
-    const [dd, setDate] = useState();
+    // const [dd, setDate] = useState();
     const handleSubmit = (e) => {
         e.preventDefault()
-        setDate(Date.now())
-        const dat = new Date(dd)
-        console.log(dat)
+        // setDate(Date.now())
+        const date = Date.now()
+        // console.log(dat)
         const user_email = user.email;
         const user_name1 = user.displayName;
         const image1 = user.photoURL;
@@ -57,7 +57,7 @@ const Details = () => {
 
         // console.log(ID,Recname)
         // update recommendation
-        fetch(`http://localhost:5000/recc/${ID}`, {
+        fetch(`https://assinment-11-server-side-alpha.vercel.app/recc/${ID}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -69,7 +69,7 @@ const Details = () => {
                 console.log(data);
                 setLoad(!load)
 
-                fetch(`http://localhost:5000/rec`, {
+                fetch(`https://assinment-11-server-side-alpha.vercel.app/rec`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

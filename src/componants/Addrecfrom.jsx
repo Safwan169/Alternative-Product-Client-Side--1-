@@ -31,7 +31,7 @@ const Addrecfrom = () => {
        
 console.log(ID,Recname)
             // update recommendation
-        fetch(`http://localhost:5000/recc/${ID}`, {
+        fetch(`https://assinment-11-server-side-alpha.vercel.app/recc/${ID}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ console.log(ID,Recname)
             .then(data => {
                 console.log(data);
 
-                // fetch(`http://localhost:5000/rec`, {
+                // fetch(`https://assinment-11-server-side-alpha.vercel.app/rec`, {
                 //     method: 'POST',
                 //     headers: {
                 //         'content-type': 'application/json'

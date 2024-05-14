@@ -5,14 +5,20 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Add = () => {
     const { user, load, setLoad } = Contex()
-    const [datee, setDate] = useState();
-
+    // const [datee, setDate] = useState();
+    // console.log(new Date(datee).toLocaleString())
+    // console.log(datee)
+    // console.log(new Date(date15).toLocaleString())
     const handleSubmit = (e) => {
         e.preventDefault()
-        setDate(Date.now())
-        const date = (new Date(datee))
-        console.log(datee)
-        console.log(new Date(datee))
+        // setDate((Date.now()))
+        // const datte = (new Date(datee))
+        // console.log(datte)
+        // console.log(new Date(datee))
+
+        const date = Date.now();
+        // const data16=new Date(date15)
+        // console.log(data16.toLocaleString())
         const recommendationCount = 0
         const email = user.email;
         const user_name = user.displayName;
@@ -32,7 +38,7 @@ const Add = () => {
         // console.log(email, name, user_name, image, title, url, brand, reason)
         const userr = { user_name, image, date, email, name, brand_name, reason, url, product_title, recommendationCount }
         // send data to the server
-        fetch("http://localhost:5000/queries", {
+        fetch("https://assinment-11-server-side-alpha.vercel.app/queries", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

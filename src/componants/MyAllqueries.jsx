@@ -27,7 +27,7 @@ const MyAllqueries = ({ datas }) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-        fetch(`http://localhost:5000/queries/${id}`,
+        fetch(`https://assinment-11-server-side-alpha.vercel.app/queries/${id}`,
             {
                 method: 'delete',
                 headers: {

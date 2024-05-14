@@ -29,12 +29,12 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        loader:()=>fetch('http://localhost:5000/queries'),
+        loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/queries'),
         element:<Home></Home>
       }
       ,{
         path:'/queries',
-        loader:()=>fetch('http://localhost:5000/queries'),
+        loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/queries'),
         element:<Queries></Queries>
       }
       ,{
@@ -58,13 +58,13 @@ const router = createBrowserRouter([
       }
       ,{
         path:'/my-rec',
-        loader:()=>fetch('http://localhost:5000/rec'),
+        loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/rec'),
         
         element:<PrivateRoute><Myrec></Myrec></PrivateRoute>
       }
       ,{
         path:'/details/:id',
-        loader:()=>fetch('http://localhost:5000/rec'),
+        loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/rec'),
       
         element:<PrivateRoute><Details></Details></PrivateRoute>
       }

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Allqueries = ({datas}) => {
     const { _id,url, name, reason, product_title, email, image, date, brand_name, user_name,recommendationCount } = datas
-    const datee = new Date(date).toLocaleString()
+    // const datee = new Date(date).toLocaleString()
+    const datee=(new Date(date).toLocaleString())
 // console.log(datas)
     return (
         <div className=' flex justify-center' >

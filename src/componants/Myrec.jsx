@@ -11,7 +11,7 @@ const Myrec = () => {
 
     const [Data,setData]=useState()
     // const [load,setLoad]=useState(false)
-    useEffect(()=>{fetch('http://localhost:5000/rec')
+    useEffect(()=>{fetch('https://assinment-11-server-side-alpha.vercel.app/rec')
         .then(res=>res.json())
         .then(data=>setData(data))
     },[load])
@@ -20,7 +20,7 @@ const Myrec = () => {
     console.log(allData)
     const handleSubmit = (id,idd) => {
 // console.log(id)
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://assinment-11-server-side-alpha.vercel.app/delete/${id}`, {
             method: 'put',
             headers: {
                 'content-type': 'application/json'
@@ -31,7 +31,7 @@ const Myrec = () => {
             .then(data => {
                 // console.log(data);
 
-                fetch(`http://localhost:5000/de/${idd}`,{
+                fetch(`https://assinment-11-server-side-alpha.vercel.app/de/${idd}`,{
                     method:'DELETE',
                     headers:{
                         'content-type':'application/json'

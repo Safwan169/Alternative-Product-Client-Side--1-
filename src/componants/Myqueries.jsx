@@ -8,7 +8,7 @@ const Myqueries = () => {
     const email = user.email
     const [userr, setData] = useState()
     useEffect(() => {
-        fetch(`http://localhost:5000/myqueries/${email}`)
+        fetch(`https://assinment-11-server-side-alpha.vercel.app/myqueries/${email}`)
             .then(res => res.json())
             .then(data => setData(data))
             .then(error => console.log(error))
