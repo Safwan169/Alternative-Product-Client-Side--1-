@@ -38,7 +38,7 @@ const Queries = () => {
 
     return (
         <div>
-            <div className='mt-24 flex'>
+            <div className='mt-24 flex flex-col lg:items-center lg:flex-row'>
 
                 <form onSubmit={handleSubmit} class="max-w-md  w-full mx-auto">
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"></label>
@@ -53,9 +53,10 @@ const Queries = () => {
                     </div>
                 </form>
                 <div>
-                    <div className=' flex w-[80px] gap-2 mr-20 items-center'><span className='  text-gray-500'> view :</span><span className=''><AiFillLayout onClick={() => setLayout(!layout)} size={20} /></span></div>
-                    {
-                        layout ? <div className='flex gap-3 mt-5'>
+                    <div className=' flex w-full mt-5 lg:mt-0 lg:justify-normal lg:pr-0 justify-end pr-[30px] lg:w-[80px]  gap-2 lg:mr-20 items-center'><span className='  text-gray-500'> view :</span><span className=''><AiFillLayout onClick={() => setLayout(!layout)} size={20} /></span></div>
+                    
+                       <div className='block'>{
+                         layout ? <div className='flex absolute justify-end ml-56 lg:ml-0 lg:mr-0 lg:justify-normal gap-3 mt-5'>
                             <span className='' onClick={()=>setGrid('grid-cols-1')}>
                                 <VscLayoutCentered />
                             </span>
@@ -65,11 +66,12 @@ const Queries = () => {
                             <span onClick={()=>setGrid('grid-cols-3')}>
                                 <TfiLayoutColumn3Alt />
                             </span>
-                        </div> : ''
-                    }
+                        </div> : ''}
+                       </div>
+                    
                 </div>
             </div>
-            <div className={`lg:grid mt-12 lg:${grid}  justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10`}>
+            <div className={`lg:grid mt-5 lg:mt-12 lg:${grid}  justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10`}>
                 {
                     sortedData.map(datas => <Allqueries  datas={datas}></Allqueries>)
                 }
