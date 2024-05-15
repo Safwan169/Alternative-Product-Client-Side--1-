@@ -13,7 +13,7 @@ const Details = () => {
     const data = useLoaderData()
     console.log(data)
     // recommendation data filter by id
-    const Rec=data.filter(d=>d.querieId==ID)
+    const Rec=data?.filter(d=>d.querieId==ID)
     console.log(Rec)
     useEffect(() => {
         fetch('https://assinment-11-server-side-alpha.vercel.app/queries')
@@ -117,13 +117,13 @@ const Details = () => {
             <div className="card card-side bg-base-100 shadow-xl">
                 <figure><img className='rounded-3xl my-2 w-[400px] bg-cover h-[400px]' src={url} alt="" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{product_title}</h2>
-                    <p>Product Name : {name}</p>
-                    <p>Brand :{brand_name}</p>
-                    <p> Alternation Reason : {reason}</p>
-                    <p>Post :{dateee}</p>
-                    <p>Recommendation Count : {recommendationCount}</p>
-                    <p className="mt-3 font-normal text-gray-700 flex items-center gap-5 dark:text-gray-400">Created By :<span><img className='w-12 rounded-xl h-12' src={image} alt="" /></span><span>{user_name}</span></p>
+                    <h2 className="font-bold text-blue-500 text-xl card-title">{product_title}</h2>
+                    <p className='font-bold'>Product Name : {name}</p>
+                    <p className='font-bold'>Brand :{brand_name}</p>
+                    <p className='font-bold text-red-500'> Alternation Reason : {reason}</p>
+                    <p className='font-bold'>Post :{dateee}</p>
+                    <p className='font-bold'>Recommendation Count : {recommendationCount}</p>
+                    <p  className="mt-3 font-bold text-gray-700 flex items-center gap-5 dark:text-gray-400">Created By :<span><img className='w-12 rounded-xl h-12' src={image} alt="" /></span><span>{user_name}</span></p>
 
                 </div>
             </div>
@@ -131,7 +131,7 @@ const Details = () => {
 
             <div>
                   {
-                    Rec.map(d=><RecComment datas={d}></RecComment>)
+                    Rec?.map(d=><RecComment datas={d}></RecComment>)
                   }
 
             </div>

@@ -58,13 +58,13 @@ const router = createBrowserRouter([
       }
       ,{
         path:'/my-rec',
-        loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/rec'),
+        // loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/rec'),
         
         element:<PrivateRoute><Myrec></Myrec></PrivateRoute>
       }
       ,{
         path:'/details/:id',
-        loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/rec'),
+        // loader:()=>fetch('https://assinment-11-server-side-alpha.vercel.app/rec'),
       
         element:<PrivateRoute><Details></Details></PrivateRoute>
       }

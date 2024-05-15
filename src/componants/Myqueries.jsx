@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Myqueries = () => {
     const { user, load } = Contex()
     const email = user.email
+    console.log(email,load)
     const [userr, setData] = useState()
     useEffect(() => {
         fetch(`https://assinment-11-server-side-alpha.vercel.app/myqueries/${email}`)
@@ -14,7 +15,7 @@ const Myqueries = () => {
             .then(error => console.log(error))
     }
         , [load])
-    console.log(userr)
+    // console.log(userr)
     const sortedData = userr?.sort((a, b) => (b.date - a.date));
 
     return (

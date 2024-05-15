@@ -9,7 +9,7 @@ import { VscLayoutCentered } from 'react-icons/vsc';
 
 const Queries = () => {
     const data = useLoaderData()
-    // console.log(data)
+    console.log(data)
     const [allData, setData] = useState(data)
     const sortedData = allData.sort((a, b) => (b.date - a.date));
     console.log(sortedData)
@@ -19,8 +19,9 @@ const Queries = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const name = e.target.name.value;
+        console.log(name)
         // console.log(sortedData[0].name)
-        const serch = data.filter(d => (d.name).toUpperCase() == name.toUpperCase())
+        const serch = data.filter(d =>( (d.name).toUpperCase() == name.toUpperCase()))
         setData(serch)
         if (name == '') {
             setData(data)
@@ -73,7 +74,7 @@ const Queries = () => {
             </div>
             <div className={`lg:grid mt-5 lg:mt-12 lg:${grid}  justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10`}>
                 {
-                    sortedData.map(datas => <Allqueries  datas={datas}></Allqueries>)
+                    sortedData?.map(datas => <Allqueries  datas={datas}></Allqueries>)
                 }
             </div>
         </div>

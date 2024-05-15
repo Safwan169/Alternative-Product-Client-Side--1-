@@ -98,7 +98,7 @@ const Nav = () => {
                     <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         {/* website logo */}
                         {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo"> */}
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                        <span className="  w-20 lg:w-40 text-2xl font-semibold whitespace-nowrap dark:text-white"><img className='w-40 border lg:w-40 h-20' src='https://i.ibb.co/hVCrvJt/ts-removebg-preview.png' alt="" /></span>
                     </a>
                     <div className="flex md:order-2 space-x-3 border items-center   md:space-x-0 rtl:space-x-reverse">
                         <div className="navbar-end lg:flex md:flex mr-2 items-center  text-center  justify-end  lg:w-[120px] ml-4">
