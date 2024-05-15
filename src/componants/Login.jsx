@@ -123,7 +123,7 @@ const Login = () => {
 
         <div className='flex gap-20 justify-center my-20 items-center'>
             {/* <Helmet>
-                <title>Brite || Log In</title>
+                <title>TSpluse || Log In</title>
             </Helmet> */}
         
 

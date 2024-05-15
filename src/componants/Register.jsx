@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { auth } from './firebase/firebase.config';
 import Contex from './Contex';
 import { updateProfile } from 'firebase/auth';
+// import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const [eye, setEye] = useState(false);
@@ -92,9 +93,9 @@ const Register = () => {
 
 
 
-            {/* <div className="hero min-h-screen ">
-                {/* <Helmet>
-                <title>Brite || Register</title>
+            {/* <div className="hero min-h-screen "> */}
+                 {/* <Helmet>
+                <title>TSpluse || Register</title>
             </Helmet> */}
 
 

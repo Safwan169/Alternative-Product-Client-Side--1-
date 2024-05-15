@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import Contex from './Contex';
 import { useNavigate, useParams } from 'react-router-dom';
+// import { Helmet } from 'react-helmet-async';
 
 const Update = () => {
     const Id = useParams().id
@@ -65,6 +66,11 @@ const Update = () => {
     }
     return (
         <div className='mt-40'>
+            {/* <Helmet>
+                <title>
+                    TSpluse || Update
+                </title>
+            </Helmet> */}
             <form onSubmit={handleSubmit} action="">
                 <div className='mt-20  space-y-8 lg:w-[1200px] mx-auto'>
                     <div className='flex gap-10 justify-center '>

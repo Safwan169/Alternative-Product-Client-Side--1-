@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { Helmet } from 'react-helmet-async';
+
 
 const Allqueries = ({datas}) => {
     const { _id,url, name, reason, product_title, email, image, date, brand_name, user_name,recommendationCount } = datas
@@ -9,7 +11,11 @@ const Allqueries = ({datas}) => {
     return (
         <div className=' flex justify-center' >
 
-
+                {/* <Helmet>
+                    <title>
+                        TSpluse || Queries
+                    </title>
+                </Helmet> */}
             <div className="max-w-sm my-5   bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                     <img className="rounded-t-lg w-[400px] h-[300px]" src={`${url}`} alt="" />

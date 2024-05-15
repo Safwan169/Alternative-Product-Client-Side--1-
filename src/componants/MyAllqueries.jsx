@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Contex from './Contex';
+// import { Helmet } from 'react-helmet-async';
+
 
 const MyAllqueries = ({ datas }) => {
     const { _id, url, name, reason, product_title, email, image, date, brand_name, user_name, recommendationCount } = datas
@@ -51,7 +53,11 @@ const MyAllqueries = ({ datas }) => {
     return (
         <div >
 
-
+            {/* <Helmet>
+                <title>
+                    TSpluse || MY Queries
+                </title>
+            </Helmet> */}
             <div className="max-w-sm my-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                     <img className="rounded-t-lg w-[400px] h-[300px]" src={`${url}`} alt="" />

@@ -4,6 +4,8 @@ import Contex from './Contex';
 import { MdDelete } from 'react-icons/md';
 import Swal from 'sweetalert2';
 // import MY from './MY';
+// import { Helmet } from 'react-helmet-async';
+
 
 const Myrec = () => {
     // const data = useLoaderData()
@@ -59,6 +61,11 @@ const Myrec = () => {
 
         return (
             <div className='mt-40 lg:w-[1200px] mx-auto'>
+                {/* <Helmet>
+                    <title> 
+                        TSpluse || MY REC
+                    </title>
+                </Helmet> */}
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                         {/* <caption className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import Contex from './Contex';
 import { Typewriter } from 'react-simple-typewriter';
+// import { Helmet } from 'react-helmet-async';
 
 const Add = () => {
     const { user, load, setLoad } = Contex()
@@ -66,6 +67,9 @@ const Add = () => {
     }
     return (
         <div className='mt-12'>
+            {/* <Helmet>
+                <title>TSpluse || Add</title>
+            </Helmet> */}
             <div className='text-3xl text-center '>
                 <h1 style={{ paddingTop: '5rem', margin: ' 0', fontWeight: 'normal' }}>
                     Add  {' '}

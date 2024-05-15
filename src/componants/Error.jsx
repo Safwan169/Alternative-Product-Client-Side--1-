@@ -8,7 +8,7 @@ const Error = () => {
     return (
         <div>
             {/* <Helmet>
-                <title>Brite || Error</title>
+                <title>TSpluse || Error</title>
             </Helmet> */}
                <div className='flex-col h-[400px] font-bold  items-center mt-40    flex justify-center gap-5 text-center text-3xl '>
             

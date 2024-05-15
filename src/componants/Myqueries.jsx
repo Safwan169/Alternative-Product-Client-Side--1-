@@ -3,6 +3,8 @@ import Contex from './Contex';
 import MyAllqueries from './MyAllqueries';
 import { Typewriter } from 'react-simple-typewriter';
 import { Link } from 'react-router-dom';
+// import { Helmet } from 'react-helmet-async';
+
 const Myqueries = () => {
     const { user, load } = Contex()
     const email = user.email
@@ -21,6 +23,11 @@ const Myqueries = () => {
     return (
 
         <div>
+            {/* <Helmet>
+                <title>
+                    TSpluse || MY Queries
+                </title>
+            </Helmet> */}
             <div className='flex mt-20  justify-around '>
                  <span className=' absolute left-[150px]   h-svh text-blue-800 font-bold text-4xl'>
 

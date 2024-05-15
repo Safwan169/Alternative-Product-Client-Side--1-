@@ -13,7 +13,7 @@ const Details = () => {
     // const data = useLoaderData()
     // console.log(data)
 const [rec,setRec]=useState()
-    useEffect(()=>{fetch('')
+    useEffect(()=>{fetch('https://assinment-11-server-side-alpha.vercel.app/rec')
         .then(res=>res.json())
         .then(data=>setRec(data))
     })

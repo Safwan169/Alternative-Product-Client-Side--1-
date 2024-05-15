@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Recent from './Recent';
+// import { Helmet } from 'react-helmet-async';
+
 const Home = () => {
     const navigate=useNavigate()
 const btn=()=>{
@@ -46,9 +48,9 @@ console.log(data)
     return (
 
         <>
-
-//         {/* <Helmet>
-//             <title>Brite || Home</title>
+{/* 
+//         <Helmet>
+//             <title>TSpluse || Home</title>
 //         </Helmet> */}
 
             <Swiper
