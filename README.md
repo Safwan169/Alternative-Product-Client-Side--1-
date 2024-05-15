@@ -25,7 +25,7 @@
 *  Organize  content by country, allowing users to easily browse attractions, activities, and travel tips specific to their destination of interest.
 
  
-* Build credibility and trust by showcasing authentic reviews and testimonials from satisfied travelers who have used your services or visited recommended destinations.
+* Build credibility and trust by showcasing authentic reviews and testimonials from satisfied  who have used your services  recommended destinations.
 
 
 

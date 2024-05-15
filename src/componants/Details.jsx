@@ -10,10 +10,15 @@ const Details = () => {
     const [datada, setDataa] = useState()
     const [load, setLoad] = useState(false)
     // console.log(ID)
-    const data = useLoaderData()
-    console.log(data)
+    // const data = useLoaderData()
+    // console.log(data)
+const [rec,setRec]=useState()
+    useEffect(()=>{fetch('')
+        .then(res=>res.json())
+        .then(data=>setRec(data))
+    })
     // recommendation data filter by id
-    const Rec=data?.filter(d=>d.querieId==ID)
+    const Rec=rec?.filter(d=>d.querieId==ID)
     console.log(Rec)
     useEffect(() => {
         fetch('https://assinment-11-server-side-alpha.vercel.app/queries')
