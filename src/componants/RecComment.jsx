@@ -6,9 +6,9 @@ const RecComment = ({ datas }) => {
     const datee=new Date(date).toLocaleString()
     return (
         <div>
-            <div className="bg-white rounded-lg shadow-md p-4 mb-4">
+            <div className="bg-white rounded-lg shadow-md lg:ml-32 mt-6 p-2 mb-4">
                 {/* User Info */}
-                <div className="flex items-center mb-2">
+                <div className="flex items-center p-4 mb-2">
                     <img
                         src={image}
                        
@@ -22,15 +22,15 @@ const RecComment = ({ datas }) => {
                 {/* Recommendation Info */}
                 <p className="text-gray-700 mb-2">{reasonn}</p>
                 {/* Product Info */}
-                <div className="flex items-center mb-2">
+                <div className="flex shadow-2xl items-center p-4 mb-2">
                     <img
                         src={urll}
                         className="w-16 h-16 rounded-md mr-2"
                     />
                     <div>
                         <p className="font-semibold">{Recname}</p>
-                        <p className="text-gray-500">{brandd_name}</p>
-                        <p className="text-sm text-gray-500">{productt_title}</p>
+                        <p className="text-gray-500 font-semibold">{brandd_name}</p>
+                        <p className="text-sm font-semibold text-gray-500">{productt_title}</p>
                     </div>
                 </div>
             </div>

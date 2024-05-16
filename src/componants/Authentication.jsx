@@ -48,6 +48,23 @@ const Authentication = ({ children }) => {
                 setUser(false)
             }
         });
+
+        // if (user) {
+        //     axios.post('https://assinment-11-server-side-alpha.vercel.app/jwt', loggedUser, { withCredentials: true })
+        //         .then(res => {
+        //             console.log('token response', res.data);
+        //         })
+        // }
+        // else {
+        //     axios.post('https://assinment-11-server-side-alpha.vercel.app/logout', loggedUser, {
+        //         withCredentials: true
+        //     })
+        //         .then(res => {
+        //             console.log(res.data);
+        //         })
+        // }
+    
+        
    return unSubscribe
     }, [dep],[dep2])
     // console.log(user)
