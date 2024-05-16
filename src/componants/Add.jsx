@@ -66,7 +66,7 @@ const Add = () => {
             })
     }
     return (
-        <div className='mt-12'>
+        <div className='lg:w-[1000px] mx-auto'>
             {/* <Helmet>
                 <title>TSpluse || Add</title>
             </Helmet> */}

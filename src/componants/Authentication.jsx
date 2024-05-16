@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithP
 import React, {  createContext, useEffect, useState } from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './firebase/firebase.config';
+import axios from 'axios';
 export const myContext = createContext(null)
 
 
@@ -40,28 +41,34 @@ const Authentication = ({ children }) => {
                 setLoading(false)
 
                 setUser(user)
+
+                axios.post('https://assinment-11-server-side-alpha.vercel.app/jwt', user, { withCredentials: true })
+                .then(res => {
+                    console.log('token response', res.data);
+                })
             } else {
                 // User is signed out
                 // ...
                 setLoading(false)
 
                 setUser(false)
+
+                axios.post('https://assinment-11-server-side-alpha.vercel.app/logout', user, {
+                    withCredentials: true
+                })
+                    .then(res => {
+                        console.log(res.data);
+                    })
             }
         });
 
         // if (user) {
-        //     axios.post('https://assinment-11-server-side-alpha.vercel.app/jwt', loggedUser, { withCredentials: true })
-        //         .then(res => {
-        //             console.log('token response', res.data);
-        //         })
+        //     console.log(user)
+          
         // }
         // else {
-        //     axios.post('https://assinment-11-server-side-alpha.vercel.app/logout', loggedUser, {
-        //         withCredentials: true
-        //     })
-        //         .then(res => {
-        //             console.log(res.data);
-        //         })
+        //     console.log(user)
+           
         // }
     
         
