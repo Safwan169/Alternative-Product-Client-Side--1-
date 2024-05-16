@@ -33,8 +33,8 @@ const Authentication = ({ children }) => {
         return signInWithPopup(auth)
     }
     useEffect(() => {
-    //    const unSubscribe=
-       onAuthStateChanged(auth, (user) => {
+    //   
+    const unSubscribe=onAuthStateChanged(auth, (user) => {
             if (user) {
                 console.log(user)
                 setLoading(false)
@@ -48,8 +48,9 @@ const Authentication = ({ children }) => {
                 setUser(false)
             }
         });
-//    return unSubscribe
+   return unSubscribe
     }, [dep],[dep2])
+    // console.log(user)
     const authInfo = {
         createUser,
         signInUser,

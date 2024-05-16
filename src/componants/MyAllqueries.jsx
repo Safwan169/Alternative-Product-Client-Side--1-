@@ -41,7 +41,7 @@ const MyAllqueries = ({ datas }) => {
             .then(res => res.json())
             .then(data=>{
                 setLoad(!load)
-                        console.log(data)
+                        // console.log(data)
                         if (data.deletedCount > 0) {
                             Swal.fire(
                               'Deleted!',

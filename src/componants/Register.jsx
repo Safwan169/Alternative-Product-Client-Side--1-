@@ -15,7 +15,7 @@ const Register = () => {
     const {createUser,setDep,user}=Contex()
 
     const handleSubmit = (e) => {
-        console.log(user)
+        // console.log(user)
         e.preventDefault()
         const email = (e.target.email.value)
         const password = (e.target.password.value)

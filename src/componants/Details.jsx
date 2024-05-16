@@ -19,7 +19,7 @@ const [rec,setRec]=useState()
     })
     // recommendation data filter by id
     const Rec=rec?.filter(d=>d.querieId==ID)
-    console.log(Rec)
+    // console.log(Rec)
     useEffect(() => {
         fetch('https://assinment-11-server-side-alpha.vercel.app/queries')
         .then(res => res.json())
@@ -71,7 +71,7 @@ const [rec,setRec]=useState()
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setLoad(!load)
 
                 fetch(`https://assinment-11-server-side-alpha.vercel.app/rec`, {

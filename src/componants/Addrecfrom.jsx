@@ -40,7 +40,7 @@ console.log(ID,Recname)
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
 
                 // fetch(`https://assinment-11-server-side-alpha.vercel.app/rec`, {
                 //     method: 'POST',

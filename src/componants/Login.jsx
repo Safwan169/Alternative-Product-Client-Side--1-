@@ -48,7 +48,7 @@ const Login = () => {
 
             })
             .catch((error) => {
-                console.log(error.message)
+                // console.log(error.message)
             })
         // console.log(google)
     }
@@ -80,7 +80,7 @@ const Login = () => {
 
             })
             .catch((error) => {
-                console.log(error.massage)
+                // console.log(error.massage)
             })
     }
 
@@ -92,7 +92,7 @@ const Login = () => {
         const password = (e.target.password.value)
         setOkk('')
         setOk('')
-        console.log(email, password)
+        // console.log(email, password)
 
         signInUser(email, password)
             .then((userCredential) => {

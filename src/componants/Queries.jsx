@@ -11,7 +11,7 @@ const Queries = () => {
     const data = useLoaderData()
     console.log(data)
     const [allData, setData] = useState(data)
-    const sortedData = allData.sort((a, b) => (b.date - a.date));
+    const sortedData = allData?.sort((a, b) => (b.date - a.date));
     console.log(sortedData)
     // setData(sortedData)
     const [grid, setGrid] = useState('grid-cols-3')
@@ -19,7 +19,7 @@ const Queries = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const name = e.target.name.value;
-        console.log(name)
+        // console.log(name)
         // console.log(sortedData[0].name)
         const serch = data.filter(d =>( (d.name).toUpperCase() == name.toUpperCase()))
         setData(serch)
@@ -27,7 +27,7 @@ const Queries = () => {
             setData(data)
 
         }
-        console.log(allData)
+        // console.log(allData)
         if (serch.length==1) {
             setGrid('grid-cols-1')
             
@@ -39,9 +39,9 @@ const Queries = () => {
 
     return (
         <div>
-            <div className='mt-24 flex flex-col lg:items-center lg:flex-row'>
+            <div className=' flex flex-col lg:items-center lg:flex-row'>
 
-                <form onSubmit={handleSubmit} class="max-w-md  w-full mx-auto">
+                <form onSubmit={handleSubmit} class="max-w-md mt-10 w-full mx-auto">
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"></label>
                     <div class="relative">
                         <div class="absolute inset-y-0 start-0 flex items-center p-3 pointer-events-none">
@@ -72,7 +72,7 @@ const Queries = () => {
                     
                 </div>
             </div>
-            <div className={`lg:grid mt-5 lg:mt-12 lg:${grid}  justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10`}>
+            <div className={`lg:grid mt-5 lg:mt-12 lg:${grid}  justify-center gap-4 w-full lg:w-[1100px] mx-auto my-10`}>
                 {
                     sortedData?.map(datas => <Allqueries  datas={datas}></Allqueries>)
                 }

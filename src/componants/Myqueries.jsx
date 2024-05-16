@@ -14,7 +14,7 @@ const Myqueries = () => {
         fetch(`https://assinment-11-server-side-alpha.vercel.app/myqueries/${email}`)
             .then(res => res.json())
             .then(data => setData(data))
-            .then(error => console.log(error))
+            // .then(error => console.log(error))
     }
         , [load])
     // console.log(userr)
@@ -28,7 +28,7 @@ const Myqueries = () => {
                     TSpluse || MY Queries
                 </title>
             </Helmet> */}
-            <div className='flex mt-20  justify-around '>
+            <div className='flex mt-0  justify-around '>
                  <span className=' absolute left-[150px]   h-svh text-blue-800 font-bold text-4xl'>
 
                     <h1 style={{ paddingTop: '5rem', margin: ' 0', fontWeight: 'normal' }}>
@@ -57,10 +57,15 @@ const Myqueries = () => {
                 <img className='  ' src="https://i.ibb.co/SdGFnyz/prof-logo.png" alt="" />
             </div>
 
-            <div className='lg:grid mt-40 lg:grid-cols-3 justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10'>
+            <div >
+            {userr?.length>0? <div className='lg:grid mt-40 lg:grid-cols-3 justify-center gap-4 w-full lg:w-[1100px] mx-auto my-10'>
                 {
                     sortedData?.map(d => <MyAllqueries datas={d}></MyAllqueries>)
                 }
+            </div>:<div className='text-center mt-10 space-y-6 border border-gray-300 rounded-xl p-6 mx-auto lg:w-[1000px]'>
+                <p className='text-3xl font-bold text-gray-400 text-center'>No Queries Available</p>
+                <Link to={'/add'} className='text-white font-bold btn bg-indigo-500'> Add Queries </Link >
+            </div> }
 
             </div>
         </div>

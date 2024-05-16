@@ -3,7 +3,7 @@ import 'animate.css'
 import { IoTimeOutline } from 'react-icons/io5';
 import { CiLocationOn } from 'react-icons/ci';
 const Recent = ({ datas }) => {
-    console.log(datas)
+    // console.log(datas)
     const { url, name, reason, product_title, email, image, date, brand_name, user_name } = datas
     const datee = new Date(date).toLocaleString()
     return (

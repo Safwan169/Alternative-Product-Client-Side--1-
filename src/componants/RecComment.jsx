@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RecComment = ({ datas }) => {
-    console.log(datas)
+    // console.log(datas)
     const { Recname, brandd_name, date, image, productt_title, reasonn, urll, user_name } = datas
     const datee=new Date(date).toLocaleString()
     return (

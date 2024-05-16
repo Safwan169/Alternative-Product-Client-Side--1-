@@ -19,7 +19,7 @@ const Myrec = () => {
     },[load])
 
     const allData = Data?Data.filter(d => d.email === user.email):''
-    console.log(allData)
+    // console.log(allData)
     const handleSubmit = (id,idd) => {
 // console.log(id)
         fetch(`https://assinment-11-server-side-alpha.vercel.app/delete/${id}`, {
@@ -43,7 +43,7 @@ const Myrec = () => {
                 .then(res=>res.json())
                 .then(data=>{
                 setLoad(!load)
-                        console.log(data)
+                        // console.log(data)
                         if (data.deletedCount > 0) {
                             Swal.fire(
                               'Deleted!',
@@ -60,7 +60,7 @@ const Myrec = () => {
         }
 
         return (
-            <div className='mt-40 lg:w-[1200px] mx-auto'>
+            <div className='mt-10 lg:w-[1200px] mx-auto'>
                 {/* <Helmet>
                     <title> 
                         TSpluse || MY REC

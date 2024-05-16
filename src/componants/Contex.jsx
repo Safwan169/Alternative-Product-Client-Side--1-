@@ -3,7 +3,7 @@ import { myContext } from './Authentication';
 
 const Contex = () => {
     const auth=useContext(myContext)
-    console.log(auth)
+    // console.log(auth)
     return auth
        
 }
