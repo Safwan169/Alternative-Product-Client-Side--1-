@@ -10,6 +10,7 @@
 
 ## Live Link :[ https://product-info-bd6b7.web.app](https://product-info-bd6b7.web.app )
 
+## server side repo :https://github.com/Safwan169/Alternative-Product-Server-Side-
 
 
 ## Overview
@@ -23,7 +24,17 @@ Our Alternative Product platform empowers users to find and share alternative pr
 - **Add Reviews**: Submit reviews and provide feedback on products.
 - **Find Alternatives**: Discover alternative products based on user queries and reviews.
 
+   
+* Implement a responsive navigation bar that allows users to easily navigate through different sections of the website, ensuring seamless access to essential features and information.
 
+* Utilize a dynamic slider feature to showcase high-quality images of various residential estates, providing users with an engaging visual experience.
+  
+* Highlight a selection of top destinations with stunning images and brief descriptions to entice visitors to explore further.
+   
+*  Organize  content by country, allowing users to easily browse attractions, activities, and travel tips specific to their destination of interest.
+
+ 
+* Build credibility and trust by showcasing authentic reviews and testimonials from satisfied travelers who have used your services or visited recommended destinations.
 
 # How to Contribute
 
